@@ -1,0 +1,30 @@
+import datetime
+
+def save_report_to_txt(report_data):
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"report_{timestamp}.txt"
+    
+    with open(filename, "w", encoding="utf-8") as file:
+        for entry in report_data:
+            file.write(f"{entry['kaynakID']} - {entry['KaynakURL']} - {entry['status']}\n")
+
+import datetime
+
+def write_report_to_txt(report_data):
+    """
+    Rapor verilerini TXT dosyasına kaydeder.
+    report_data: List of dictionaries containing URL and status.
+    """
+    date_stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    file_name = f"report_{date_stamp}.txt"
+    with open(file_name, "w") as file:
+        file.write("URL Erişilebilirlik Raporu\n")
+        file.write(f"Tarih: {date_stamp}\n\n")
+        for item in report_data:
+            file.write(f"URL: {item['url']} - Durum: {item['status']}\n")
+    print(f"Rapor {file_name} dosyasına kaydedildi.")
+report_data = [
+    {"url": "https://example.com", "status": "200 OK"},
+    {"url": "https://notfound.com", "status": "404 Not Found"}
+]
+write_report_to_txt(report_data)

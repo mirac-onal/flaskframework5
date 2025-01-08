@@ -1,0 +1,9 @@
+<sources>
+    <source>
+        <id>1</id>
+        <name>Example Source</name>
+        <details>Some details</details>
+        <url>https://example.com</url>
+        <timestamp>2025-01-05T12:00:00</timestamp>
+    </source>
+<source><sourceId>1</sourceId><sourceName>Nutuk</sourceName><sourceDetails>Mustafa Kemal Atat&#252;rk'e ait eserdir.</sourceDetails><sourceUrl>https://ekitap.ktb.gov.tr/TR-273376/nutuk.html</sourceUrl><timestamp>2025-01-08T16:14</timestamp></source></sources>
